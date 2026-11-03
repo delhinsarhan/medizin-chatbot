@@ -153,15 +153,15 @@ def password_ok() -> bool:
     try:
         correct = st.secrets["APP_PASSWORD"]
     except Exception:
-        return True   # local without Password
-    if st.session_state.get("logged in"):
+        return True   # local without password
+    if st.session_state.get("signed_in"):
         return True
-    input = st.text_input("Passwort", type="password")
-    if input == correct:
-        st.session_state.signedin = True
+    entered = st.text_input("Password", type="password")
+    if entered == correct:
+        st.session_state.signed_in = True
         st.rerun()
-    elif input:
-        st.error("Wrong Password.")
+    elif entered:
+        st.error("Wrong password.")
     return False
 
 if not password_ok():
