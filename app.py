@@ -149,7 +149,7 @@ def show_answer(answer: str, location: str) -> None:
 st.set_page_config(page_title="Paediatric Hypertension Guideline Chatbot", page_icon="🩺")
 st.title("🩺 Paediatric Hypertension Guideline Chatbot")
 
-def password_ok() -> bool:
+""" def password_ok() -> bool:
     try:
         correct = st.secrets["APP_PASSWORD"]
     except Exception:
@@ -165,7 +165,7 @@ def password_ok() -> bool:
     return False
 
 if not password_ok():
-    st.stop()
+    st.stop() """
 
 st.caption(
     "Research prototype for a bachelor's thesis, based on the ESC consensus "
