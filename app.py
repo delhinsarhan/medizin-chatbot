@@ -149,24 +149,6 @@ def show_answer(answer: str, location: str) -> None:
 st.set_page_config(page_title="Paediatric Hypertension Guideline Chatbot", page_icon="🩺")
 st.title("🩺 Paediatric Hypertension Guideline Chatbot")
 
-""" def password_ok() -> bool:
-    try:
-        correct = st.secrets["APP_PASSWORD"]
-    except Exception:
-        return True   # local without password
-    if st.session_state.get("signed_in"):
-        return True
-    entered = st.text_input("Password", type="password")
-    if entered == correct:
-        st.session_state.signed_in = True
-        st.rerun()
-    elif entered:
-        st.error("Wrong password.")
-    return False
-
-if not password_ok():
-    st.stop() """
-
 st.caption(
     "Research prototype for a bachelor's thesis, based on the ESC consensus "
     "document on hypertension in children and adolescents (2022). "
